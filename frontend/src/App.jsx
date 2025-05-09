@@ -20,6 +20,7 @@ import Terms from './pages/Terms';
 import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
 import ExchangeReturnRequest from './pages/ExchangeReturnRequest';
+import ProductDetail from './pages/ProductDetail';
 
 
 function App() {
@@ -45,6 +46,8 @@ function App() {
           <Route path="/blogs" element={<Blogs/>}/>
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/exchange-return-request" element={<ExchangeReturnRequest/>}/>
+          <Route path="/product/:productId" element={<ProductDetail />} />
+          
           
         </Routes>
       </div>
