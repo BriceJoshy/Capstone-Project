@@ -1,0 +1,31 @@
+debug: true
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      #      default-filters:
+      #        - RewritePath=([^/])$, $1/ #Rewrite /
+      mvc:
+        routes:
+          - id: USER-service-routes
+            uri: lb://USER-SERVICE
+            predicates:
+              - Path=/api/auth/**
+              - Method=POST,OPTIONS
+            filters:
+              - RewritePath=/api/auth/(?<segment>.*), /auth/$\{segment}
+#          - id: product-service-route
+#            uri: lb://PRODUCT-SERVICE
+#            predicates:
+#              - Path=/api/products/**
+#              - Method=GET,POST,OPTIONS
+#            filters:
+#              - RewritePath=/api/products/(?<segment>.*), /products/$\{segment}
+
+server:
+  port: 9000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${DISCOVERY_SERVER:localhost}:8761/eureka
