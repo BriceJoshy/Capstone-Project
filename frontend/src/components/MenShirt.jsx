@@ -10,7 +10,7 @@ const MenShirt = () => {
   useEffect(() => {
     const fetchShirts = async () => {
       try {
-        const res = await axios.get('http://localhost:8080/api/products');
+        const res = await axios.get('http://localhost:9002/api/products');
         const filtered = res.data.filter(product => product.productCategory === 'Men');
         setShirts(filtered);
       } catch (err) {
