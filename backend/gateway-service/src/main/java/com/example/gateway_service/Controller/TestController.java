@@ -1,5 +1,4 @@
-package com.example.gateway_service.TestController;
-
+package com.example.gateway_service.Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
