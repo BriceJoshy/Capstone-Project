@@ -3,6 +3,7 @@ package com.example.user_service.security.util;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
@@ -14,7 +15,9 @@ import java.util.List;
 @Component
 public class JwtUtil {
 
-    private final String SECRET = "fa04ba3741c723e9509224985307f1837da2186aca4c92e4931c854ddf711b5e";
+    @Value("${jwt.secret}")
+    private String SECRET;
+
     private final long EXP_TIME = 86400000;
 
     public String generateToken(UserDetails userDetails) {

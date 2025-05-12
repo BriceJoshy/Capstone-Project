@@ -16,6 +16,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -56,19 +57,38 @@ public class AuthController {
     public ResponseEntity<?> login(@RequestBody LoginRequest request) {
         if (userService.findByUserName(request.userName()).isEmpty()) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
-                    .body(
-                            Map.of("status", HttpStatus.UNAUTHORIZED, "payload", "User does not exists")
-                    );
+                    .body(Map.of("status", HttpStatus.UNAUTHORIZED, "payload", "User does not exist"));
         }
+
         var unAuthenticatedUser = new UsernamePasswordAuthenticationToken(
                 request.userName(), request.password()
         );
-        // Authenticate the user
-        Authentication authenticatedUser =
-                authenticationManager.authenticate(unAuthenticatedUser);
-        String token = jwtUtil.generateToken((UserDetails) authenticatedUser.getPrincipal());
-        return ResponseEntity.ok(Map.of("status", HttpStatus.OK, "token", token));
 
+        try {
+            // Authenticate the user
+            Authentication authenticatedUser = authenticationManager.authenticate(unAuthenticatedUser);
+
+            // Generate JWT token
+            String token = jwtUtil.generateToken((UserDetails) authenticatedUser.getPrincipal());
+
+            // Extract roles from the token
+            List<String> roles = jwtUtil.extractRoles(token);
+
+            // Print roles to the console (or log it)
+            logger.info("Roles extracted from token: " + roles);
+
+            // Return the token and roles in the response
+            return ResponseEntity.ok(Map.of(
+                    "status", HttpStatus.OK,
+                    "token", token,
+                    "roles", roles,
+                    "userName", request.userName()// Return roles as part of the response
+            ));
+
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                    .body(Map.of("status", HttpStatus.UNAUTHORIZED, "payload", "Invalid username or password"));
+        }
     }
 
 

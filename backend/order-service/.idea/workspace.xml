@@ -4,7 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63d33124-a799-4cf6-8c0f-bce99746965f" name="Changes" comment="" />
+    <list default="true" id="b7ad3ae5-99a8-42fe-89e7-8843f587c7ce" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../measurement-service/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../measurement-service/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../measurement-service/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HELP.md" beforeDir="false" afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/order_service/Controller/OrderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/order_service/Dto/OrderRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/order_service/Entity/Order$OrderBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/order_service/Entity/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/order_service/OrderServiceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/order_service/Repository/OrderRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/order_service/Security/JwtFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/order_service/Security/JwtUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/order_service/Security/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/order_service/Service/OrderService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/example/product_service/ProductServiceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/example/product_service/ProductServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../product-service/src/main/java/com/example/product_service/ProductServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/example/product_service/controller/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/example/product_service/entity/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/example/product_service/entity/Size.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/example/product_service/repository/ProductRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/example/product_service/security/JwtFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/example/product_service/security/JwtUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/example/product_service/security/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/example/product_service/service/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/java/com/example/product_service/service/ProductServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../product-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-service/src/main/java/com/example/user_service/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/src/main/java/com/example/user_service/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-service/src/main/java/com/example/user_service/model/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/src/main/java/com/example/user_service/model/AppUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-service/src/main/java/com/example/user_service/security/util/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/src/main/java/com/example/user_service/security/util/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,9 +62,10 @@
     </option>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
   "associatedIndex": 8
 }]]></component>
-  <component name="ProjectId" id="2wy2MWN3DaBDv5TW74yF3frbR3w" />
+  <component name="ProjectId" id="2x06A4on6DKoC17lCV9aStf2Dz2" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -43,19 +78,16 @@
     "Application.OrderServiceApplication.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "product-service-edit",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/Capstone Project/backend/order-service"
+    "git-widget-placeholder": "main-fix"
   }
 }]]></component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="63d33124-a799-4cf6-8c0f-bce99746965f" name="Changes" comment="" />
-      <created>1746999445057</created>
+      <changelist id="b7ad3ae5-99a8-42fe-89e7-8843f587c7ce" name="Changes" comment="" />
+      <created>1747062496846</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1746999445057</updated>
+      <updated>1747062496846</updated>
     </task>
     <servers />
   </component>
