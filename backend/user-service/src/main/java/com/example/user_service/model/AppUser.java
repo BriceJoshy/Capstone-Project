@@ -15,6 +15,8 @@ public class AppUser {
     @Column(name = "user_name", nullable = false, unique = true)
     private String userName;
 
+    private String fullName;
+
     private String password;
 
     private String email;
