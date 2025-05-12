@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-// Import new pages
 import Men from './pages/Men';
 import Women from './pages/Women';
 import Kids from './pages/Kids';
@@ -21,13 +20,14 @@ import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
 import ExchangeReturnRequest from './pages/ExchangeReturnRequest';
 import ProductDetail from './pages/ProductDetail';
-
+import TailorDashboard from './pages/TailorDashboard';
+import ProductManagement from './pages/ProductManagement';
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <div className="pt-13 pb-0"> {/* "pt-6 pb-20"-->intial Added padding at bottom to ensure footer visibility */}
+      <div className="pt-13 pb-0">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/men" element={<Men />} />
@@ -47,8 +47,8 @@ function App() {
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/exchange-return-request" element={<ExchangeReturnRequest/>}/>
           <Route path="/product/:productId" element={<ProductDetail />} />
-          
-          
+          <Route path="/tailor/dashboard" element={<TailorDashboard />} />
+          <Route path="/tailor/products" element={<ProductManagement />} />
         </Routes>
       </div>
       <Footer />
